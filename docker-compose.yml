@@ -10,7 +10,7 @@ services:
       - '5555:5555'
     working_dir: /backend
     volumes:
-      - ./backend:/backend
+      - .:/backend
       - ./zsh/.zshrc:/home/node/.zshrc
       - ./zsh/.zsh_history:/home/node/.zsh_history
     networks:
