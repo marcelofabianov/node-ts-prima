@@ -5,9 +5,6 @@ services:
     container_name: backend
     restart: always
     build: .
-    ports:
-      - '3000:3000'
-      - '5555:5555'
     working_dir: /backend
     volumes:
       - .:/backend
@@ -15,6 +12,9 @@ services:
       - ./zsh/.zsh_history:/home/node/.zsh_history
     networks:
       - node_network
+    ports:
+      - '3000:3000'
+      - '5555:5555'
     depends_on:
       - postgres
 
@@ -28,10 +28,10 @@ services:
       POSTGRES_DB: 'nest_db'
     volumes:
       - 'node_db:/var/lib/postgresql/data'
-    ports:
-      - "5432:5432"
     networks:
       - node_network
+    ports:
+      - "5432:5432"
 
 networks:
   node_network:
