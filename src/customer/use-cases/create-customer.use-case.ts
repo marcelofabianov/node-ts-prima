@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { CustomerRepository } from '@customer/use-cases/customer.repository';
 import { createCustomerDto } from '@customer/create-customer.dto';
+import { Customer } from '@customer/customer.entity';
 
 export class CreateCustomerUseCase {
   constructor(
