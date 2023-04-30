@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "swc src/index.ts --out-dir dist --source-maps",
     "watch": "swc src/index.ts --out-dir dist --watch --source-maps",
-    "lint": "eslint \"**/*.ts\"",
+    "lint": "eslint src/**/*.ts --ext .ts --warning=0",
     "test": "jest",
     "test-watch": "jest --watchAll",
     "coverage": "jest --coverage"
