@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { createCustomerDto } from '@customer/customer.dto';
+import { createCustomerDto } from '@customer/create-customer.dto';
 
 describe('createCustomerDto', () => {
   const validCustomer = {

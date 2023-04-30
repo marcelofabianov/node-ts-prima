@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { createCustomerDto } from "./customer.dto";
+import { createCustomerDto } from "@customer/create-customer.dto";
 
 export class Customer {
   public readonly id: string;
