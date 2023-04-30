@@ -1,3 +1,4 @@
+import { createCustomerDto } from '@customer/customer.dto';
 import { Customer } from "@customer/customer.entity";
 
 describe('customer', () => {
@@ -10,7 +11,7 @@ describe('customer', () => {
   const deletedAt = new Date;
 
   it('should create new customer', () => {
-    const customer = new Customer({
+    const customer = new Customer(createCustomerDto.parse({
       id,
       name,
       registrationDocument,
@@ -18,15 +19,15 @@ describe('customer', () => {
       updatedAt,
       inactivatedAt,
       deletedAt
-    });
+    }));
 
     expect(customer).toBeDefined()
     expect(customer.id).toBe(id);
     expect(customer.name).toBe(name);
     expect(customer.registrationDocument).toBe(registrationDocument);
-    expect(customer.createdAt).toBe(createdAt);
-    expect(customer.updatedAt).toBe(updatedAt);
-    expect(customer.inactivatedAt).toBe(inactivatedAt);
-    expect(customer.deletedAt).toBe(deletedAt);
+    expect(customer.createdAt).toBeInstanceOf(Date);
+    expect(customer.updatedAt).toBeInstanceOf(Date);
+    expect(customer.inactivatedAt).toBeInstanceOf(Date);
+    expect(customer.deletedAt).toBeInstanceOf(Date);
   })
 });

@@ -1,14 +1,5 @@
 import { z } from 'zod';
-
-const customerSchema = z.object({
-  id: z.string().uuid(),
-  name: z.string().max(255).min(3),
-  registrationDocument: z.string().max(14).min(11),
-  createdAt: z.date(),
-  updatedAt: z.date(),
-  inactivatedAt: z.date().optional(),
-  deletedAt: z.date().optional()
-});
+import { createCustomerDto } from "./customer.dto";
 
 export class Customer {
   public readonly id: string;
@@ -19,7 +10,7 @@ export class Customer {
   public readonly inactivatedAt?: Date;
   public readonly deletedAt?: Date;
 
-  constructor(dto: z.infer<typeof customerSchema>) {
+  constructor(dto: z.infer<typeof createCustomerDto>) {
     this.id = dto.id;
     this.name = dto.name;
     this.registrationDocument = dto.registrationDocument;
