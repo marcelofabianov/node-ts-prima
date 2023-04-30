@@ -10,7 +10,7 @@ describe('customer', () => {
   const deletedAt = new Date;
 
   it('should create new customer', () => {
-    const customer = new Customer(
+    const customer = new Customer({
       id,
       name,
       registrationDocument,
@@ -18,7 +18,7 @@ describe('customer', () => {
       updatedAt,
       inactivatedAt,
       deletedAt
-    )
+    });
 
     expect(customer).toBeDefined()
     expect(customer.id).toBe(id);
@@ -26,7 +26,7 @@ describe('customer', () => {
     expect(customer.registrationDocument).toBe(registrationDocument);
     expect(customer.createdAt).toBe(createdAt);
     expect(customer.updatedAt).toBe(updatedAt);
-    expect(customer.inacitavedAt).toBe(inactivatedAt);
+    expect(customer.inactivatedAt).toBe(inactivatedAt);
     expect(customer.deletedAt).toBe(deletedAt);
   })
 });
