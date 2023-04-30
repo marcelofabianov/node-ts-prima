@@ -25,9 +25,9 @@ services:
     environment:
       POSTGRES_USER: 'user'
       POSTGRES_PASSWORD: 'secret'
-      POSTGRES_DB: 'nest_db'
+      POSTGRES_DB: 'customer_db'
     volumes:
-      - 'node_db:/var/lib/postgresql/data'
+      - 'customer_db:/var/lib/postgresql/data'
     networks:
       - node_network
     ports:
@@ -38,5 +38,5 @@ networks:
     driver: bridge
 
 volumes:
-  node_db:
+  customer_db:
     driver: local

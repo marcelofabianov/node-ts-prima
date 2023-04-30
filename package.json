@@ -14,6 +14,7 @@
   "author": "Marcelo Fabiano",
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "^4.13.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
@@ -31,10 +32,11 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
     "jest": "^29.5.0",
     "prettier": "^2.8.8",
+    "prisma": "^4.13.0",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.0.4",
-    "husky": "^8.0.0"
+    "typescript": "^5.0.4"
   }
 }
