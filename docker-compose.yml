@@ -8,8 +8,8 @@ services:
     working_dir: /backend
     volumes:
       - .:/backend
-      - ./zsh/.zshrc:/home/node/.zshrc
-      - ./zsh/.zsh_history:/home/node/.zsh_history
+      - ./.zsh/.zshrc:/home/node/.zshrc
+      - ./.zsh/.zsh_history:/home/node/.zsh_history
     networks:
       - node_network
     ports:
@@ -31,7 +31,7 @@ services:
     networks:
       - node_network
     ports:
-      - "5432:5432"
+      - '5432:5432'
 
 networks:
   node_network:
