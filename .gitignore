@@ -102,7 +102,7 @@ yarn-error.log
 .env
 
 # Docker
-/zsh/.zsh_history
+/.zsh/.zsh_history
 
 # Extensions
 *.sh
